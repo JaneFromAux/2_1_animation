@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 100vh;
+    grid-template-areas: "2000 1000 500 250 125";
+    color: white;
+    font-size: 3rem;
+    animation-name: strobo;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    text-align: center;
+}
+
+section div {
+    border-left: 2px dotted lime;
+    border-right: 2px dotted lime;
+}
+
+section div p {
+    padding-top: 48vh;
+}
+
+.tausend {
+    animation-name: strobo;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+.funfhundert {
+    animation-name: strobo;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+}
+
+.zwofuchzig {
+    animation-name: strobo;
+    animation-duration: 250ms;
+    animation-iteration-count: infinite;
+}
+
+.einsfunfazwanzg {
+    animation-name: strobo;
+    animation-duration: 125ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes strobo {
+    0% {
+        background-color: white;
+        color: black;
+        transition: background ease-in-out,
+            color ease-in-out;
+    }
+
+    70% {
+        background-color: black;
+        color: white;
+        transition: background ease-in-out,
+            color ease-in-out;
+    }
+
+    90% {
+        background-color: white;
+        color: black;
+        transition: background ease-in-out,
+            color ease-in-out;
+    }
+
+    100% {
+        background-color: black;
+        color: white;
+        transition: background ease-in-out,
+            color ease-in-out;
+    }
+
+}
